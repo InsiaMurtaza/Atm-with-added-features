@@ -4,7 +4,7 @@ const myBalance = 50000;
 let answer = await inquirer.prompt([{
         name: "Q1",
         message: "Enter Your four digit ATM Pin!",
-        type: "input"
+        type: "number"
     }]);
 if (answer.Q1 == atm_pin) {
     let answer1 = await inquirer.prompt([{
@@ -31,7 +31,7 @@ if (answer.Q1 == atm_pin) {
                 let answer3 = await inquirer.prompt([{
                         name: "Q5",
                         message: "Enter the Amount:",
-                        type: "input"
+                        type: "number"
                     }]);
                 if (answer3.Q5 < 1000 || answer3.Q5 > 20000 || answer3.Q5 % 500 !== 0) {
                     console.log("Please enter a valid amount!");
@@ -58,7 +58,7 @@ if (answer.Q1 == atm_pin) {
                 {
                     name: "Q7",
                     message: "Enter the amount",
-                    type: "input"
+                    type: "number"
                 }]);
             if (answer4.Q7 > myBalance) {
                 console.log("Insufficient Balance!");
